@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+/* font-family: 'Josefin Sans',
+sans-serif; */
+
+.light-theme {
+
+    --BrightBlue: hsl(220, 98%, 61%);
+    --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+    /* light theme */
+
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --DarkGrayishBlue: hsl(236, 9%, 61%);
+    --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+}
+
+
+.dark-theme {
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    /* (hover) */
+    --LightGrayishBlueHover: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlueHover: hsl(237, 14%, 26%);
+
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--VeryLightGray);
+    background-image: url('./images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    font-family: 'Josefin Sans',
+        sans-serif;
+
+}
+
+
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#todoApp {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: auto;
+    min-height: 560px;
+    user-select: none;
+}
+
+#one-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header {
+    color: var(--VeryLightGray);
+    letter-spacing: 1rem;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+#two-c {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--VeryLightGray);
+    margin-top: 2.5rem;
+}
+
+#task-i {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .8rem .5rem .8rem 0rem;
+}
+
+.btn {
+
+    margin: 1rem 1.2rem;
+    border-radius: 100%;
+    width: 27.5px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid;
+    outline: none;
+    background-color: transparent;
+}
+
+
+.btn-ok {
+
+    border-radius: 100%;
+    width: 90%;
+    height: 90%;
+    border: none;
+    outline: none;
+    background-color: white;
+    pointer-events: none;
+    background-image: url("./images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.check-icon {
+    background-image: url("./images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+
+#btn-div {
+
+    width: 30px;
+    height: 25px;
+    margin: 1rem 1.2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(87, 221, 255);
+    background: linear-gradient(144deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
+}
+
+
+
+
+
+
+
+
+#three-c {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--VeryLightGray);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 1.5rem;
+    height: auto;
+    max-height: 352px;
+}
+
+.output-d {
+    display: flex;
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    padding: .4px 0rem;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.output-i {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    font-size: 1rem;
+    padding-right: .5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+
+}
+
+#delete {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+    height: 100%;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.output-d:hover #delete {
+    visibility: visible;
+}
+
+.delete-btn {
+    pointer-events: none;
+}
+
+#four-c {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--VeryLightGray);
+    padding: 1rem;
+    align-items: center;
+    margin-top: auto;
+    box-shadow: 0px 30px 20px -24px var(--VeryDarkGrayishBlue);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+}
+
+#text-l {
+    color: var(--LightGrayishBlue);
+    font-weight: 600;
+    font-size: .9rem;
+    user-select: none;
+}
+
+.options {
+    display: flex;
+    gap: 1rem;
+}
+
+.optn-btn {
+    font-size: .9rem;
+    font-weight: 600;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--LightGrayishBlue);
+}
+
+.active {
+    color: var(--BrightBlue);
+}
+
+.active:hover {
+    color: var(--BrightBlue) !important;
+}
+
+.optn-btn:hover {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+
+.ok-effect {
+    text-decoration: line-through;
+    color: var(--LightGrayishBlue);
+}
