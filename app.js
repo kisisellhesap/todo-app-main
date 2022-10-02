@@ -10,11 +10,11 @@ const completedC = document.querySelector("#completed-c");
 const icons = document.querySelector("#icons");
 let arr = [];
 
-console.log(icons);
+// console.log(icons);
 
 icons.addEventListener("click", function () {
     if (document.querySelector("body").classList == "light-theme") {
-        console.log(document.querySelector("body"));
+        // console.log(document.querySelector("body"));
         document.querySelector("body").classList = "dark-theme";
     }
     else {
@@ -29,9 +29,9 @@ addBtn.addEventListener("click", function () {
         deleteTask();
         OkOrNot();
 
-        console.log(arr);
-        console.log(arr.length + " arr length");
-        console.log(threeC.childElementCount + " three child");
+        // console.log(arr);
+        // console.log(arr.length + " arr length");
+        // console.log(threeC.childElementCount + " three child");
         taskLength(threeC.childElementCount - arr.length);
 
         // over - scroll
@@ -56,9 +56,9 @@ taskInput.addEventListener("keypress", function (e) {
 deleteallBtn.addEventListener("click", function () {
     threeC.innerHTML = "";
     arr = [];
-    console.log(arr);
-    console.log(arr.length + " arr length");
-    console.log(threeC.childElementCount + " three child");
+    // console.log(arr);
+    // console.log(arr.length + " arr length");
+    // console.log(threeC.childElementCount + " three child");
     taskLength(threeC.childElementCount);
 
 })
@@ -108,16 +108,16 @@ function deleteTask() {
 
             if (deleteX.classList == "output-d completed") {
                 arr.length--;
-                console.log(arr);
-                console.log(arr.length + " arr length");
-                console.log(threeC.childElementCount + " three child");
+                // console.log(arr);
+                // console.log(arr.length + " arr length");
+                // console.log(threeC.childElementCount + " three child");
                 taskLength(threeC.childElementCount - arr.length);
             }
             else {
 
-                console.log(arr);
-                console.log(arr.length + " arr length");
-                console.log(threeC.childElementCount + " three child");
+                // console.log(arr);
+                // console.log(arr.length + " arr length");
+                // console.log(threeC.childElementCount + " three child");
                 taskLength(threeC.childElementCount - arr.length);
             }
 
@@ -191,15 +191,15 @@ function OkOrNot() {
 
             for (let optn of options.children) {
                 if ((optn.classList == "optn-btn active" && optn.id == "active") && ok.classList == "output-d completed") {
-                    console.log(optn);
-                    console.log(ok);
+                    // console.log(optn);
+                    // console.log(ok);
                     ok.style.display = "none";
                 }
 
                 if ((optn.classList == "optn-btn active" && optn.id == "completed") && ok.classList == "output-d all active") {
-                    console.log(optn);
+                    // console.log(optn);
                     ok.style.display = "none";
-                    console.log(ok);
+                    // console.log(ok);
                 }
             }
 
@@ -209,18 +209,18 @@ function OkOrNot() {
             if (ok.classList == "output-d completed") {
                 arr.push(ok);
 
-                console.log(arr);
-                console.log(arr.length + " arr length");
-                console.log(threeC.childElementCount + " three child");
+                // console.log(arr);
+                // console.log(arr.length + " arr length");
+                // console.log(threeC.childElementCount + " three child");
                 taskLength(threeC.childElementCount - arr.length);
 
             }
             else {
                 arr.length--;
 
-                console.log(arr);
-                console.log(arr.length + " arr length");
-                console.log(threeC.childElementCount + " three child");
+                // console.log(arr);
+                // console.log(arr.length + " arr length");
+                // console.log(threeC.childElementCount + " three child");
                 taskLength(threeC.childElementCount - arr.length);
 
             }
@@ -249,11 +249,11 @@ function OkOrNot() {
 
 function taskLength(newCount) {
 
-    console.log("------------NEWCOUNT-----");
-    console.log(arr);
-    console.log(arr.length + " arr length");
-    console.log(threeC.childElementCount + " three child");
-    console.log(newCount + " newCount");
+    // console.log("------------NEWCOUNT-----");
+    // console.log(arr);
+    // console.log(arr.length + " arr length");
+    // console.log(threeC.childElementCount + " three child");
+    // console.log(newCount + " newCount");
 
 
 
