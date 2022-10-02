@@ -7,11 +7,21 @@ const options = document.querySelector(".options");
 const allC = document.querySelector("#all-c");
 const activeC = document.querySelector("#active-c");
 const completedC = document.querySelector("#completed-c");
+const icons = document.querySelector("#icons");
 let arr = [];
 
-// activeC.style.display = "none";
-// completedC.style.display = "none";
+console.log(icons);
 
+icons.addEventListener("click", function () {
+    if (document.querySelector("body").classList == "light-theme") {
+        console.log(document.querySelector("body"));
+        document.querySelector("body").classList = "dark-theme";
+    }
+    else {
+        document.querySelector("body").classList = "light-theme";
+    }
+
+});
 
 addBtn.addEventListener("click", function () {
     if (!taskInput.value == "") {
@@ -29,8 +39,13 @@ addBtn.addEventListener("click", function () {
         optnsControl();
 
     }
+});
 
+taskInput.addEventListener("keypress", function (e) {
 
+    if (e.key === "Enter") {
+        document.querySelector("#add").click();
+    }
 
 });
 
@@ -40,7 +55,12 @@ addBtn.addEventListener("click", function () {
 
 deleteallBtn.addEventListener("click", function () {
     threeC.innerHTML = "";
-    taskLength(threeC.childElementCount - arr.length);
+    arr = [];
+    console.log(arr);
+    console.log(arr.length + " arr length");
+    console.log(threeC.childElementCount + " three child");
+    taskLength(threeC.childElementCount);
+
 })
 
 
@@ -134,17 +154,29 @@ function OkOrNot() {
 
 
 
+
+
             if (btnChild.classList == "btn-ok check-icon") {
 
                 ok.classList.remove("all");
                 ok.classList.remove("active");
                 ok.classList.add("completed");
 
+                btnChild.style.width = "100%";
+                btnChild.style.height = "100%";
+
+
+
+
+
             }
             else {
                 ok.classList.add("all");
                 ok.classList.add("active");
                 ok.classList.remove("completed");
+
+                btnChild.style.width = "90%";
+                btnChild.style.height = "90%";
             }
 
 
@@ -241,7 +273,7 @@ function taskLength(newCount) {
 
 
 function overScroll() {
-    if (threeC.childElementCount > 5) {
+    if (threeC.childElementCount > 6) {
         threeC.style.overflowY = "scroll";
     }
     else {
@@ -331,3 +363,8 @@ function optnsControl() {
 
 
 }
+
+
+
+
+
